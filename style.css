@@ -1,118 +1,110 @@
 @font-face {
     font-family: 'office_code_proregular';
     src: url('fonts/officecodepro-regular-webfont.eot');
-    src: url('fonts/officecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/officecodepro-regular-webfont.woff2') format('woff2'),
-         url('fonts/officecodepro-regular-webfont.woff') format('woff'),
-         url('fonts/officecodepro-regular-webfont.ttf') format('truetype'),
-         url('fonts/officecodepro-regular-webfont.svg#office_code_proregular') format('svg');
+    src: url('fonts/officecodepro-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/officecodepro-regular-webfont.woff2') format('woff2'), url('fonts/officecodepro-regular-webfont.woff') format('woff'), url('fonts/officecodepro-regular-webfont.ttf') format('truetype'), url('fonts/officecodepro-regular-webfont.svg#office_code_proregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'office_code_probold';
     src: url('fonts/officecodepro-bold-webfont.eot');
-    src: url('fonts/officecodepro-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/officecodepro-bold-webfont.woff2') format('woff2'),
-         url('fonts/officecodepro-bold-webfont.woff') format('woff'),
-         url('fonts/officecodepro-bold-webfont.ttf') format('truetype'),
-         url('fonts/officecodepro-bold-webfont.svg#office_code_probold') format('svg');
+    src: url('fonts/officecodepro-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/officecodepro-bold-webfont.woff2') format('woff2'), url('fonts/officecodepro-bold-webfont.woff') format('woff'), url('fonts/officecodepro-bold-webfont.ttf') format('truetype'), url('fonts/officecodepro-bold-webfont.svg#office_code_probold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
+@media only screen and (max-width: 600px) {
+    body {
+        Display: flex;
+        width: 100%;
+        height: auto;
+        align-content: center;
+        text-align: justify;
+        background-size: cover;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    aside,
+    .softskills,
+    .hardskills,
+    .background,
+    .intro2,
+    .listehotels,
+    .hobbies {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        align-items: stretch;
+        flex-wrap: wrap;
+        overflow: scroll;
+        width: 100%;
+    }
+    #conteneur2,
+    #conteneur3,
+    #conteneur4,
+    #conteneur5 {
+        display: flex;
+        flex-shrink: 1;
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+    }
+    .separateur {
+        display: none;
+    }
+    .NOM {
+        width: 70%;
+    }
+}
 
-/* Sur tous types d'écran, quand la largeur inférieure à 1024px */
-@media all and (max-width: 1024px)
-
-{
-  body
-  {
-    width: auto;
-    max-width: 1024px;
-    height: auto;
-    align-content: center;
-    margin:auto;
-    text-align: justify;
-  }
-
-  aside, .softskills, .hardskills, .background
-  {
-    height: auto;
+body {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    flex-wrap: wrap; 
-    overflow: scroll;
-  }
-
-  #conteneur2, #conteneur3
-{
-  width: 100%;
-  margin: auto;
-  padding: 0;
-}  
-
-  .separateur, .separateur2, .separateur3, .separateur4
-  {
-    display: none;
-  }
-
-  .NOM
-  {
-    width: 70%;
-  }
+    margin: auto;
+    font-family: 'office_code_proregular', Impact, Arial, Sans Serif;
+    color: white;
+    font-size: 0.8em;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("backgroundmain.jpg");
+    /* assombrissement de l'image */
+    background-attachment: local, fixed;
+    /* defilement sur le fond d'ecran restant fixe */
+    background-position: center;
+    /* center l'image */
+    background-repeat: no-repeat;
+    /* ne pas la répeter */
+    background-size: cover;
+    /* l'image complete la page */
+    width: 100%;
+    max-width: 1080px;
 }
 
-
-
-
-body 
-{
-   display : flex;
-   flex-direction: column;
-   margin: auto;
-   font-family: 'office_code_proregular', Impact, Arial, Sans Serif;
-   color: white;
-   font-size: 0.8em;
-   
-   background-image: linear-gradient( 
-      rgba(0, 0, 0, 0.3), 
-      rgba(0, 0, 0, 0.3)),url("backgroundmain.jpg"); /* assombrissement de l'image */
-
-      min-height: 500px;
-  background-attachment: local,fixed; /* defilement sur le fond d'ecran restant fixe */
-  background-position: center; /* center l'image */
-  background-repeat: no-repeat; /* ne pas la répeter */
-  background-size: cover; /* l'image complete la page */
-
-   width: 80%; /* utilisation que de 80% de la largeur de la page. % pour une compatibilité max. */
+header {
+    display: flex;
+    height: 55em;
+    /* hauteur du bloc. A peu pres la taille d'une page d'un navigateur */
+    flex-direction: column;
+    /* disposition verticale du bloc */
+    justify-content: space-between;
+    /* repartition verticale egale dans le bloc */
+    align-items: center;
+    /* center horinzontalement */
 }
 
-
-
-
-header
-{
-	display: flex;
-	height: 55em; /* hauteur du bloc. A peu pres la taille d'une page d'un navigateur */
-	flex-direction: column; /* disposition verticale du bloc */
-	justify-content: space-between; /* repartition verticale egale dans le bloc */
-	align-items: center; /* center horinzontalement */
-}
-
-.NOM
-{
+.NOM {
     font-family: 'office_code_probold';
     color: #e62a72;
     font-size: 4em;
     font-style: bold;
     margin: auto;
-
     opacity: 0.8;
 }
 
-.intro
-{
+.intro {
     font-family: 'office_code_probold';
     text-align: center;
     font-size: 1.1em;
@@ -121,36 +113,21 @@ header
     padding-bottom: 1em;
 }
 
-.photo
-{
+.photo {
     box-shadow: 4px 4px 20px 4px white;
-   	margin: auto;	
+    margin: auto;
     padding: 4px 4px 0 4px;
 }
 
-.separateur
-{
-  display: block;
-  width: 100%;
-  margin: auto;
+#conteneur2 {
+    display: flex;
+    height: 55em;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
 }
 
-
-
-
-
-
-#conteneur2
-{
-	display: flex;
-	height: 55em;
-	flex-direction: column;
-	align-content: center;
-	justify-content: space-between;
-}
-
-h2
-{
+h2 {
     color: #a1d102;
     font-size: 2.5em;
     font-family: 'office_code_probold';
@@ -158,317 +135,261 @@ h2
     margin: 0.625em 1.875em 1.875em 1.875em 1.875em;
     opacity: 0.8;
 }
-.background
-{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  
-  background-repeat: no-repeat;
-  background-position: center;
-  background: rgba(0, 0, 0,0.3); /* Black background with 30% opacity */
-  background-attachment: local; /* le fond noir reste collé au bloc et défile avec */
-  background-size: contain;
-  
-  margin: auto;
-  height:30em;
-  width: 60em;
-  padding: 2em;
 
-  border: 2px solid black;
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: rgba(0, 0, 0, 0.3);
+    /* Black background with 30% opacity */
+    background-attachment: local;
+    /* le fond noir reste collé au bloc et défile avec */
+    background-size: cover;
+    margin: auto;
+    height: 50%;
+    width: 70%;
+    padding: 2em;
+    border: 2px solid black;
 }
 
-.intro2
-{
+.intro2 {
     font-size: 1.1em;
     margin: auto;
 }
 
-.listehotels
-{
-   	margin: auto;
+.listehotels {
+    margin: auto;
 }
 
-.listehotels em
-{
-  font-family: 'office_code_probold';
-  font-style: italic;
-  font-size: 1.1em;
+.listehotels em {
+    font-family: 'office_code_probold';
+    font-style: italic;
+    font-size: 1.1em;
 }
 
-ol
-{
-	list-style-type: circle;
-  margin: 1.875em 0 0 -2.5em;
+ol {
+    list-style-type: circle;
+    margin: 1.875em 0 0 -2.5em;
 }
 
-.separateur2
-{
-  display: block;
-  width: 100%;
-  margin: auto;
+#conteneur3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 55em;
+    margin-bottom: 0.3125em;
 }
 
-
-
-
-
-
-#conteneur3
-{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-  height: 55em;
-	margin-bottom: 0.3125em;
-}
-
-.intro3
-{
-
+.intro3 {
     font-size: 1.1em;
     margin: auto;
 }
 
-h3
-{
-    color: #e6dc62; /* couleur jaune type code */
+h3 {
+    color: #e6dc62;
+    /* couleur jaune type code */
     font-size: 1.4em;
     font-style: italic;
 }
 
-#conteneur3 ul /* ne concerne que les listes du conteneur 3 */
-{
-  padding: 0.625em; /* écart de 10px entre le titre h3 et la liste */
-  margin: 0;
-  list-style-type: none; /* enlever les points de la liste */
-}
-
-
-#conteneur3 li:before { /* inserer quelque chose avant */
-  content: "•"; /* Insert content that looks like bullets */ 
-  padding-right: 1em; /* restaurer l'ecart de 16px entre le nouveaux points et le texte */
-  color: #e6dc62; /* couleur du titre h3 pour les points */
-}
-
-
-aside
-{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-
-.softskills, .hardskills
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  
-  margin: auto;
-  padding: 1em;
-
-  width: 28em;
-  height: 20em;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background: rgba(0, 0, 0, 0.3); /* Black background with 30% opacity */
-  background-attachment: local; /* le fond noir reste collé au bloc et défile avec */
-  background-size: contain;
-
-  border: 2px solid black;
-}
-
-aside span
-{
-  padding-left: 1.25em;
-}
-
-.separateur3
-{
-  display: block;
-  width: 100%;
-  margin: auto;
-}
-
-
-
-
-
-
-#conteneur4
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 55em;
-  margin-bottom: 0.3125em;
-}
-
-.formation
-{
-  width: 85%;
-
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-}
-
-
-.separateur4
-{
-  display: block;
-  width: 100%;
-  margin: auto;
-}
-
-#conteneur5
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 70em;
-  margin-bottom: 0.3125em;
-}
-
-h4
-{
-  color: #49c0ef; /* couleur bleue type code */
-  font-size: 2.4em;
-  font-style: italic;
-}
-
-.hobbies
-{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  
-  margin: auto;
-  padding: 2em;
-
-  width: 50em;
-  height: 22em;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background: rgba(0, 0, 0, 0.3); /* Black background with 30% opacity */
-  background-attachment: local; /* le fond noir reste collé au bloc et défile avec */
-  background-size: contain;
-
-  border: 2px solid black;
-
-
-}
-
-#conteneur5 ul /* ne concerne que les listes du conteneur 3 */
-{
-  padding: 0.625em; /* écart de 10px entre le titre h3 et la liste */
-  margin: 0;
-  list-style-type: none; /* enlever les points de la liste */
-}
-
-#conteneur5 li:before { /* inserer quelque chose avant */
-  content: "•"; /* Insert content that looks like bullets */ 
-  padding-right: 1em; /* restaurer l'ecart de 16px entre le nouveaux points et le texte */
-  color: #49c0ef; /* couleur du titre h4 pour les points */
-}
-
-.pieddepage
-{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  width : 50em;
-  height: 10em;
-
-  padding: 2em;
-  margin: auto;
-}
-
-
-a:hover {	/* survol des liens */
-  font-weight:bold;
-  color: #1166c2;
-}
-
-.Contacts
+#conteneur3 ul
+/* ne concerne que les listes du conteneur 3 */
 
 {
-  display: flex;
-  height: 5em;
-  width: 35em;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
+    padding: 0.625em;
+    /* écart de 10px entre le titre h3 et la liste */
+    margin: 0;
+    list-style-type: none;
+    /* enlever les points de la liste */
 }
 
-#Linkedin
-{
-	width: 3.5em;
-  height: auto;
-  border-radius: 8px 8px;
-
-
-  margin: auto;
+#conteneur3 li:before {
+    /* inserer quelque chose avant */
+    content: "•";
+    /* Insert content that looks like bullets */
+    padding-right: 1em;
+    /* restaurer l'ecart de 16px entre le nouveaux points et le texte */
+    color: #e6dc62;
+    /* couleur du titre h3 pour les points */
 }
 
-#Linkedin:hover
-{
-    box-shadow:0 0 15px 2px black, /* effet sureleve sur le flou */
-                0 0 20px 10px #187bb5; /* taille et couleur de l'ombre autour du logo */
+aside {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
-#Instagram
-{
-  width: 3.5em;
-  height: auto;
-  border-radius: 10px 10px;
-  margin: auto;
-  flex:2;
+.softskills,
+.hardskills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    padding: 1em;
+    width: 40%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: rgba(0, 0, 0, 0.3);
+    /* Black background with 30% opacity */
+    background-attachment: local;
+    /* le fond noir reste collé au bloc et défile avec */
+    background-size: contain;
+    border: 2px solid black;
 }
 
-#Instagram:hover
+aside span {
+    padding-left: 1.25em;
+}
+
+#conteneur4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 55em;
+    margin-bottom: 0.3125em;
+}
+
+.formation {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+#conteneur5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 60%;
+    margin-bottom: 0.3125em;
+    width: 100%;
+}
+
+h4 {
+    color: #49c0ef;
+    /* couleur bleue type code */
+    font-size: 2.4em;
+    font-style: italic;
+}
+
+.hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: auto;
+    padding: 2em;
+    width: 60%;
+    height: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: rgba(0, 0, 0, 0.3);
+    /* Black background with 30% opacity */
+    background-attachment: local;
+    /* le fond noir reste collé au bloc et défile avec */
+    background-size: contain;
+    border: 2px solid black;
+}
+
+#conteneur5 ul
+/* ne concerne que les listes du conteneur 3 */
+
 {
+    padding: 0.625em;
+    /* écart de 10px entre le titre h3 et la liste */
+    margin: 0;
+    list-style-type: none;
+    /* enlever les points de la liste */
+}
+
+#conteneur5 li:before {
+    /* inserer quelque chose avant */
+    content: "•";
+    /* Insert content that looks like bullets */
+    padding-right: 1em;
+    /* restaurer l'ecart de 16px entre le nouveaux points et le texte */
+    color: #49c0ef;
+    /* couleur du titre h4 pour les points */
+}
+
+.pieddepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    height: 20%;
+    padding: 2em;
+    margin: auto;
+}
+
+a:hover {
+    /* survol des liens */
+    font-weight: bold;
+    color: #1166c2;
+}
+
+.Contacts {
+    display: flex;
+    height: 20%;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+#Linkedin {
+    width: 3.5em;
+    height: auto;
+    border-radius: 8px 8px;
+    margin: auto;
+}
+
+#Linkedin:hover {
     box-shadow: 0 0 15px 2px black, /* effet sureleve sur le flou */
-                10px -10px 20px #9934bd,
-                10px 10Px 20px #d92a80,
-              -10px 10px 20px #febe55,
-              -10px -10px 20px #4b63d4; /* taille et couleur de l'ombre autour du logo */
+    0 0 20px 10px #187bb5;
+    /* taille et couleur de l'ombre autour du logo */
 }
 
-#Email
-{
-  width: 3.5em;
-  height: auto;
-  margin: auto;
+#Instagram {
+    width: 3.5em;
+    height: auto;
+    border-radius: 10px 10px;
+    margin: auto;
+    flex: 2;
 }
 
-#Email:hover
-{
+#Instagram:hover {
+    box-shadow: 0 0 15px 2px black, /* effet sureleve sur le flou */
+    10px -10px 20px #9934bd, 10px 10Px 20px #d92a80, -10px 10px 20px #febe55, -10px -10px 20px #4b63d4;
+    /* taille et couleur de l'ombre autour du logo */
+}
+
+#Email {
+    width: 3.5em;
+    height: auto;
+    margin: auto;
+}
+
+#Email:hover {
     border: 1px solid black;
-    box-shadow: 0 0 20px 0 white; /* taille et couleur de l'ombre autour du logo */
+    box-shadow: 0 0 20px 0 white;
+    /* taille et couleur de l'ombre autour du logo */
 }
 
-
-
-.separateur5
-{
-  display: block;
-  width: 100%;
-  margin: auto;
+.separateur {
+    margin: auto;
 }
